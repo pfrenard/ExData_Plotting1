@@ -29,7 +29,16 @@ plot(dataset$DateTime, dataset$Sub_metering_1, xlab="", ylab = "Energy sub meter
 lines(dataset$DateTime, dataset$Sub_metering_1, type="l")
 lines(dataset$DateTime, dataset$Sub_metering_2, type="l", col="red")
 lines(dataset$DateTime, dataset$Sub_metering_3, type="l", col="blue")
-legend("topright",lty=c(1,1,1), col=c("black","red","blue"), legend=c("Sub_metering_1","Sub_metering_2","Sub_metering_3"), box.lty=0)
+legend("topright",
+       lty=c(1,1,1), 
+       col=c("black","red","blue"), 
+       legend=c("Sub_metering_1","Sub_metering_2","Sub_metering_3"), 
+       box.lty=0,
+       text.width= strwidth(" Sub_metering_1 __"),
+       cex=0.5)
+
+### I was forced to add text.width and cex to control the legend into the PNG file 
+### it was OK on the screen, but not into PNG ??!
 
 #plot 2x2
 plot(dataset$DateTime, dataset$Global_reactive_power, xlab="datetime", ylab = "Global_reactive_power", type="l")
