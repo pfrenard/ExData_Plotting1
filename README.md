@@ -1,10 +1,10 @@
-## Warnings :)
-The PNG device is not producing the exact image from the screen.
-I had issues on PNG files : 
-- with legend (draw on left while "topright" was specified)
-- with labels ( good on screen but too huge on PNG files)
+## Assetment
 
-The issue is probably due to the difference between screen resolution (3200x1800) and PNG resolution (480x480) :) 
+A file subset.txt is generated using a grep command from Linux command line
+<pre> cat household_power_consumption.txt | egrep "^[12]/2/2007|Date" > subset.txt </pre>
+
+I tried first to generate png file using dev.copy(png, ..) function, but in term of rendering png() is really better. 
+I finaly changed my submission. 
 
 
 
