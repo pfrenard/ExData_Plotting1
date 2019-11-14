@@ -14,11 +14,11 @@ dataset <- read_delim(filename, delim = ";" , col_names = TRUE, col_types = "ccd
 dataset$DateTime <- dmy(dataset$Date)+hms(dataset$Time)
 
 
+png("plot1.png", width = 480, height = 480)
 
 
 #Plot1
 hist(dataset$Global_active_power, col="red", main="Global Active Power", xlab = "Global Active Power (kilowatts)")
-dev.copy(png,"plot1.png")
 dev.off()
 
 
