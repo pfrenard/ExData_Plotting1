@@ -1,3 +1,13 @@
+## Warnings :)
+The PNG device is not producing the exact image from the screen.
+I had issues on PNG files : 
+- with legend (draw on left while "topright" was specified)
+- with labels ( good on screen but too huge on PNG files)
+
+The issue is probably due to the difference between screen resolution (3200x1800) and PNG resolution (480x480) :) 
+
+
+
 ## Introduction
 
 This assignment uses data from
